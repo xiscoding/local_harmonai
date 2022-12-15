@@ -1,0 +1,30 @@
+Download and run harmonai locally 
+
+--open google colab
+	-https://colab.research.google.com/github/Harmonai-org/sample-generator/blob/main/Dance_Diffusion.ipynb#scrollTo=y9BS0ks1oEgP&uniqifier=1
+--create conda enviroment (optional)
+--create project folder
+--clone repos into folder 
+	-https://github.com/crowsonkb/v-diffusion-pytorch
+	-https://github.com/harmonai-org/sample-generator
+
+--convert mp3 to wav
+	-https://online-audio-converter.com/
+
+
+
+--installs:
+	-wget
+	-gc
+	-conda install cuda -c nvidia
+	-wandb
+	-conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia
+
+
+--RUN ORDER:
+-checkgpu.py
+-preparesys.py
+-imports_definitions.py
+-model.py
+-sampler_options.py
+-generate.py
