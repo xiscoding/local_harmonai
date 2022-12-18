@@ -1,0 +1,9 @@
+__pycache__/
+audio_out/
+checkpoints/
+init_audio/
+models/
+recordings/
+sample-generator/
+v-diffusion-pytorch/
+wandb/
