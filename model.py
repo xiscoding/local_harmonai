@@ -15,7 +15,7 @@ model_name = "custom" #@param ["glitch-440k", "jmann-small-190k", "jmann-large-5
 #@markdown If you have a custom fine-tuned model, choose "custom" above and enter a path to the model checkpoint here
 
 #@markdown These options will not affect non-custom models
-custom_ckpt_path = '/home/xdoestech/harmonai/checkpoints/maestro-uncond-150k.ckpt'#@param {type: 'string'}
+custom_ckpt_path = '/home/xdoestech/harmonai/checkpoints/unlocked-uncond-250k.ckpt'#@param {type: 'string'}
 
 custom_sample_rate = 16000 #@param {type: 'number'}
 custom_sample_size = 65536 #@param {type: 'number'}

@@ -80,7 +80,7 @@ def reverse_sample(model_fn, audio, steps=100, sampler_type="v-iplms", noise_lev
     t = im_def.torch.linspace(0, 1, steps + 1, device=device)
     step_list = im_def.get_crash_schedule(t)
 
-    return im_def.sampling.iplms_sample(model_fn, im_def.audio_samples, step_list, {}, is_reverse=True)
+    return im_def.sampling.iplms_sample(model_fn, audio, step_list, {}, is_reverse=True)
 
   elif sampler_type.startswith("k-"):
     denoiser = K.external.VDenoiser(model_fn)

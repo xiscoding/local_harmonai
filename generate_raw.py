@@ -1,11 +1,10 @@
 import playsound
-from imports_definitions import args, plot_and_hear, torch, gc, log_audio_to_wandb, rearrange
+from imports_definitions import args, plot_and_hear, torch, gc, log_audio_to_wandb, rearrange, x
 from model import model_fn, device, model_name, custom_ckpt_path, os
 from sampler_options import resample, sample, sampler_type
 from scipy.io.wavfile import write
 import datetime
 
-x = datetime.datetime.now()
 #@markdown How many audio clips to create
 batch_size =  4#@param {type:"number"}
 
@@ -39,7 +38,7 @@ if not skip_for_run_all:
   generated_all = rearrange(generated, 'b d n -> d (b n)')
   #NOTE: enter appropriate filename and output directory for your use case
   file_name = 'generateraw'
-  output_dir = '/home/xdoestech/harmonai/audio_out'
+  output_dir = '/home/xdoestech/harmonai/audio_out/generate_raw'
   print("All samples")
   plot_and_hear(generated_all, args.sample_rate)
   for ix, gen_sample in enumerate(generated):

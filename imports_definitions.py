@@ -29,6 +29,11 @@ import matplotlib.pyplot as plt
 import IPython.display as ipd
 from audio_diffusion.utils import Stereo, PadCrop
 from glob import glob
+from scipy.io.wavfile import write
+import os
+import datetime
+
+x = datetime.datetime.now()
 
 #@title Model code
 class DiffusionUncond(nn.Module):
@@ -45,9 +50,17 @@ from pydub import AudioSegment
 
 #google colab
 def plot_and_hear(audio, sr):
+    file_name = 'im_def'
+    output_dir = '/home/xdoestech/harmonai/audio_out/generate_raw'
     # display(ipd.Audio(audio.cpu().clamp(-1, 1), rate=sr))
     # playsound.playsound(audio.cpu().clamp(-1, 1))
-    plt.plot(audio.cpu().t().numpy())
+    audio = audio.cpu().numpy()
+    # audio = audio.astype('int16')
+    audio_path = os.path.join(
+        output_dir, "{}_synthesis_{}.wav".format(file_name, x.strftime("%f")))
+    write(audio_path, sr, audio.T)
+    print(audio_path)
+    plt.plot(audio.T)
     plt.show()
   
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')

@@ -1,6 +1,6 @@
 #@title Generate new sounds from recording
 import playsound
-from imports_definitions import args, plot_and_hear, torch, gc, log_audio_to_wandb, rearrange, load_to_device, torchaudio
+from imports_definitions import args, plot_and_hear, torch, gc, log_audio_to_wandb, rearrange, load_to_device, torchaudio, x
 from model import model_fn, device, model_name, custom_ckpt_path, wget, os
 from sampler_options import resample, sample, sampler_type
 from enter_audio import file_path, recording_file_path, record_audio
@@ -8,10 +8,9 @@ from audio_diffusion.utils import Stereo, PadCrop
 from scipy.io.wavfile import write
 import datetime
 
-x = datetime.datetime.now()
 #NOTE: enter appropriate filename and output directory for your use case
-file_name = 'generatefromaudio'
-output_dir = '/home/xdoestech/harmonai/audio_out'
+file_name = 'generatefromaudio_bigxthaplug'
+output_dir = '/home/xdoestech/harmonai/audio_out/generate_from_audio'
 #@markdown Total number of steps (100 is a good start, more steps trades off speed for quality)
 steps = 100#@param {type:"number"}
 

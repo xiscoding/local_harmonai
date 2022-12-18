@@ -9,10 +9,10 @@ x = datetime.datetime.now()
 Audio = Tuple[int, np.ndarray]
 
 #@markdown Check the box below to create an audio recording interface below
-record_audio = False #@param {type: "boolean"}
+record_audio = True #@param {type: "boolean"}
 
 #@markdown If you left "record_audio" blank, enter a path to an audio file you want to alter, or leave blank to upload a file (.wav or .flac).
-file_path = "" #@param{type:"string"}
+file_path = "/home/xdoestech/harmonai/init_audio/bigxthaplug_safehouse.wav" #@param{type:"string"}
 
 #@markdown Number of audio recordings to combine into one clip. Only applies if the "record_audio" box is checked.
 n_audio_recordings = 1 #@param{type:"number"}
