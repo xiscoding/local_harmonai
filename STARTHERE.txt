@@ -40,3 +40,7 @@ https://phoenixnap.com/kb/linux-commands-check-memory-usage
 -htop
 -mpstat (suda apt-get install sysstat)
 -sudo dmesg -T (memory check)
+
+FILES TO ADD TO REPO:
+train_uncond.py -> sample-generator/train_uncod.py
+
