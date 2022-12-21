@@ -66,21 +66,4 @@ os.system(f"python3 sample-generator/train_uncond.py --ckpt-path {CKPT_PATH}\
                                                           --save-path {OUTPUT_DIR}")
 
 
-# samplesize:65536
-# numworkers:3
-# batchsize:1
-# accumbatches:4
-## vram: 10415MiB
-##RAM USAGE UP TO 30GBS
-
-# samplesize:65536-8192
-# numworkers:4
-# batchsize:2
-# accumbatches:4
-## vram: 9943MiB - 11649
-
-# samplesize:65536-8192*2
-# numworkers:4
-# batchsize:2
-# accumbatches:4
-## vram: 
+#Make sure to change the OUTPUT_DIR in train_uncond.py

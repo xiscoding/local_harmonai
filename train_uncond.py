@@ -26,7 +26,7 @@ from audio_diffusion.models import DiffusionAttnUnet1D
 from audio_diffusion.utils import ema_update
 from viz.viz import audio_spectrogram_image
 
-
+output_dir = {YOUR OUPUT DIRECTORY}
 # Define the noise schedule and sampling loop
 def get_alphas_sigmas(t):
     """Returns the scaling factors for the clean image (alpha) and for the
@@ -173,8 +173,8 @@ class DemoCallback(pl.Callback):
             filename = f'demo_{trainer.global_step:08}'
             fakes = fakes.clamp(-1, 1).mul(32767).to(torch.int16).cpu()
             # torchaudio.save(filename, fakes, self.sample_rate)
-#!!!!!!!
-            output_dir = {YOUR OUPUT DIRECTORY}
+
+            output_dir = OUTPUT_DIR
             #save name format: day#oftheyear(1-365) (microsecondoftheday)
             final_filename = "{}_synthesis_{}_{}.wav".format(filename, datetime.datetime.now().strftime("%j"), datetime.datetime.now().strftime("%f"))
             torchaudio. save(
