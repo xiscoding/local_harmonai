@@ -2,7 +2,7 @@
 
 Required links: 
 <a href="https://github.com/Harmonai-org/sample-generator">Harmonai official sample-generator</a><br>
-<a href="https://github.com/crowsonkb/v-diffusion-pytorch>V-diffusion-pytorch</a><br>
+<a href="https://github.com/crowsonkb/v-diffusion-pytorch">V-diffusion-pytorch</a><br>
 <a href="https://colab.research.google.com/github/Harmonai-org/sample-generator/blob/main/Dance_Diffusion.ipynb">Dance Diffusion colab</a><br>
 <a href="https://colab.research.google.com/github/Harmonai-org/sample-generator/blob/main/Finetune_Dance_Diffusion.ipynb">Finetune Dance Diffusion colab</a><br>
 
