@@ -9,7 +9,7 @@ Required links:
 </ul>
 
 Steps to combine files and run:
-0. clone all repos, ensure you have python => 3.7, set up environment, etc
-1. move files from local_harmonai into the correct location (CHECK STARTHERE.txt)
+0. clone local_harmonai, ensure you have python => 3.7, set up environment, etc
+1. clone sample-generator and v-diffusion-pytorch into local_harmonai (CHECK STARTHERE.txt)
 2. follow installation instructions for v-diffusion-pytorch and sample-generator</a>
 3. Run preffered program 
