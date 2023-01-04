@@ -78,7 +78,7 @@ os.system(f"python3 sample-generator/train_uncond.py --ckpt-path {CKPT_PATH}\
                                                           --num-workers 8\
                                                           --num-gpus 1\
                                                           {random_crop_str}\
-                                                          --device_num = {DEVICE_NUM}\
+                                                          --device_num {DEVICE_NUM}\
                                                           --save-path {OUTPUT_DIR}")
 
 
